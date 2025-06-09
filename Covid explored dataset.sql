@@ -1,4 +1,9 @@
+/*
 --Data Exploration
+
+...Skills used: Joins, Temp Tables, CTE's, Windows FUnctions, Aggregate Functions, Creating Views 
+
+*/
 Select *
 From PortfolioProject..CovidDeaths
 oRDER BY 3,4
@@ -7,14 +12,14 @@ oRDER BY 3,4
 --From PortfolioProject..CovidVaccination
 --Order by 3,4
 
---Try to select the data thata will be used in this project
+--Try to select the data that will be used in this project
 
 Select Location, Date, total_cases, new_cases, total_deaths, population
 From PortfolioProject..CovidDeaths
 oRDER BY 1,2
 
 --Review the total cases vs total deaths
--- This is a rough estimate of people dying if thet contract covid in their country
+-- This is a rough estimate of people dying if thAt contract covid in their country
 Select Location, Date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
 From PortfolioProject..CovidDeaths
 Where Location like '%netherlands%'
